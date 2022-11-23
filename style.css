@@ -41,6 +41,25 @@ body {
 .grid-item {
     margin-bottom: 20px;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0, 0.2);
+    font-size: 13px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 @media (min-width: 576px) {
