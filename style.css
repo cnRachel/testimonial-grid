@@ -6,6 +6,7 @@
 
 body {
     background-color: #ecf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 #testimonial-grid-container {
@@ -15,6 +16,8 @@ body {
 #testimonial-1 {
     background-color: #7541c8;
     color: #ffff;
+    position: relative;
+    z-index: 0;
 }
 
 #testimonial-2 {
@@ -23,8 +26,9 @@ body {
 
 }
 
-#testimonial-3 {
+#testimonial-3, #testimonial-5 {
     background-color: #ffffff;
+    color: #48556a;
 }
 
 #testimonial-4 {
@@ -32,10 +36,6 @@ body {
     color: #ffff;
 
     
-}
-
-#testimonial-5 {
-    background-color: #ffffff;
 }
 
 .grid-item {
@@ -46,20 +46,39 @@ body {
     font-size: 13px;
 }
 
+.grid-item p {
+    opacity: 70%;
+}
+
 .header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    z-index: 3;
+    position: relative;
+}
+
+.header .name {
+    opacity: 100%;
+    font-size: 1rem;
 }
 
 .header img {
     border-radius: 50%;
     margin-right: 10px;
+    border: 2px solid #7541c8
 }
 
 .grid-item h4 {
     margin-bottom: 20px;
     font-size: 1.2rem;
+}
+
+#quote {
+    position: absolute;
+    right: 15%;
+    top: 0;
+    z-index: 1;
 }
 
 @media (min-width: 576px) {
@@ -86,17 +105,17 @@ body {
 
     #testimonial-grid-container {
         display: flex;
-        max-width: 900px;
+        max-width: 1440px;
         margin: 0 auto;
     }
 
     #testimonial-5 {
-        flex-basis: 25%;
+        flex-basis: 20%;
     }
 
     #main-left {
         flex-direction: column;
-        flex-basis: 75%;
+        flex-basis: 80%;
     }
 
     #main-left .grid-item {
